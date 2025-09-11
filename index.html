@@ -1,13 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.cdnfonts.com/css/cursed-timer-ulil" rel="stylesheet">
 </head>
+
 <body>
-    
-    <script src="script.js"></script>
+    <div class="game-wrapper">
+        <div class="score-wrapper">
+            <h1 class="team-title">HOME</h1>
+            <div id="home-score" class="score-value">0</div>
+            <div class="score-actions">
+                <button id="home-1increment" class="increment-btn" onclick="incrementScore('home', 1)">+1</button>
+                <button id="home-2increment" class="increment-btn" onclick="incrementScore('home', 2)">+2</button>
+                <button id="home-3increment" class="increment-btn" onclick="incrementScore('home', 3)">+3</button>
+            </div>
+        </div>
+        <div class="score-wrapper">
+            <h1 class="team-title">GUEST</h1>
+            <div id="guest-score" class="score-value">0</div>
+            <div class="score-actions">
+                <button id="guest-1increment" class="increment-btn" onclick="incrementScore('guest', 1)">+1</button>
+                <button id="guest-2increment" class="increment-btn" onclick="incrementScore('guest', 2)">+2</button>
+                <button id="guest-3increment" class="increment-btn" onclick="incrementScore('guest', 3)">+3</button>
+            </div>
+        </div>
+        <script src="script.js"></script>
 </body>
+
 </html>

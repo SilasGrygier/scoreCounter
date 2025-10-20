@@ -11,9 +11,41 @@ html {
 body {
   flex: 1; /* Takes up entire vertical space of parent (html) */
   display: flex;
+  flex-direction: column;
   background-color: #1b244a;
   justify-content: center;
   align-items: center;
+  gap: clamp(1rem, 2vw, 3rem); /* gap between time and game wrapper */
+}
+
+.time-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: clamp(0.5rem, 1.5vw, 2rem);
+}
+
+.time-actions {
+  display: flex;
+  justify-content: space-between;
+  gap: clamp(0.25rem, 5vw, 2rem); /* Reduce gap for tighter spacing */
+}
+
+.time-btn {
+  flex: 1;
+  /* aspect-ratio: 1; */
+  /* height: 100%;
+  max-height: 100%; */
+  font-size: clamp(1rem, 2vw, 2rem);
+  border: 3px solid #9aabd8;
+  border-radius: 8px;
+  color: #9aabd8;
+  background-color: #1b244a;
+}
+
+.increment-btn,
+.time-btn {
+  transition: all 0.2s ease;
+  cursor: pointer;
 }
 
 .game-wrapper {
@@ -21,12 +53,12 @@ body {
   width: clamp(
     300px,
     90%,
-    800px
+    750px
   ); /*Will create 5% margins on each side due to (justify content center of the parent)*/
   height: clamp(
-    400px,
-    65vh,
-    850px
+    300px,
+    50vh,
+    600px
   ); /*Min height of 400px, max height of 600px, otherwise take up 65% of viewport height*/
 
   /* These properties affect it's children alignment */
@@ -37,21 +69,33 @@ body {
 .score-wrapper {
   /* width: 35%; */
   /* flex: 1; */
-  width: clamp(200px, 18vw, 350px);
+  width: clamp(150px, 18vw, 350px);
   display: flex;
   flex-direction: column;
   gap: clamp(0.5rem, 3vw, 2rem);
 }
 
-.team-title {
+.team-title,
+.time-text {
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   color: white;
   font-weight: 700;
   flex: 36;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
   font-size: clamp(2rem, 4vw, 3rem);
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.time-display {
+  font-family: "Cursed Timer ULiL", sans-serif;
+  color: #f94f6d;
+  font-size: clamp(6rem, 10vw, 8rem);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
 }
 .score-value {
   font-family: "Cursed Timer ULiL", sans-serif;
@@ -61,6 +105,7 @@ body {
   flex: 120;
   font-size: clamp(5rem, 11vw, 7rem);
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
 }
@@ -84,4 +129,48 @@ body {
   border-radius: 8px;
   color: #9aabd8;
   background-color: #1b244a;
+}
+
+/* Hover effects */
+.increment-btn:hover,
+.time-btn:hover {
+  background-color: #9aabd8;
+  color: #1b244a;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(154, 171, 216, 0.4);
+}
+/* Active effects */
+.increment-btn:active,
+.time-btn:active {
+  transform: translateY(0) scale(0.95);
+}
+
+.time-btn:disabled,
+.increment-btn:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+  /* important keyword is required to avoid disabled button from being highlighted when hover effect kicks in */
+  background-color: #2a2a2a !important;
+  border-color: #666 !important;
+  transform: translateY(0) !important;
+  box-shadow: none !important;
+}
+
+/* Special colors for timer buttons */
+#start-btn:hover {
+  background-color: #4caf50;
+  border-color: #4caf50;
+  box-shadow: 0 4px 8px rgba(76, 175, 80, 0.4);
+}
+
+#stop-btn:hover {
+  background-color: #f44336;
+  border-color: #f44336;
+  box-shadow: 0 4px 8px rgba(244, 67, 54, 0.4);
+}
+
+#reset-btn:hover {
+  background-color: #ff9800;
+  border-color: #ff9800;
+  box-shadow: 0 4px 8px rgba(255, 152, 0, 0.4);
 }

@@ -10,23 +10,32 @@
 </head>
 
 <body>
+    <div class="time-wrapper">
+        <div class="time-text">TIME</div>
+        <div class="time-display">00:00</div>
+        <div class="time-actions">
+            <button id="start-btn" class="time-btn">Start</button>
+            <button id="stop-btn" class="time-btn">Stop</button>
+            <button id="reset-btn" class="time-btn">Reset</button>
+        </div>
+    </div>
     <div class="game-wrapper">
         <div class="score-wrapper">
             <h1 class="team-title">HOME</h1>
             <div id="home-score" class="score-value">0</div>
             <div class="score-actions">
-                <button id="home-1increment" class="increment-btn" onclick="incrementScore('home', 1)">+1</button>
-                <button id="home-2increment" class="increment-btn" onclick="incrementScore('home', 2)">+2</button>
-                <button id="home-3increment" class="increment-btn" onclick="incrementScore('home', 3)">+3</button>
+                <button id="home-1increment" class="increment-btn">+1</button>
+                <button id="home-2increment" class="increment-btn">+2</button>
+                <button id="home-3increment" class="increment-btn">+3</button>
             </div>
         </div>
         <div class="score-wrapper">
             <h1 class="team-title">GUEST</h1>
             <div id="guest-score" class="score-value">0</div>
             <div class="score-actions">
-                <button id="guest-1increment" class="increment-btn" onclick="incrementScore('guest', 1)">+1</button>
-                <button id="guest-2increment" class="increment-btn" onclick="incrementScore('guest', 2)">+2</button>
-                <button id="guest-3increment" class="increment-btn" onclick="incrementScore('guest', 3)">+3</button>
+                <button id="guest-1increment" class="increment-btn">+1</button>
+                <button id="guest-2increment" class="increment-btn">+2</button>
+                <button id="guest-3increment" class="increment-btn">+3</button>
             </div>
         </div>
         <script src="script.js"></script>

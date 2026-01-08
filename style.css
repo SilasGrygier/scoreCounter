@@ -1,26 +1,31 @@
-/* @link https://utopia.fyi/type/calculator?c=360,16,1.2,1440,21,1.25,5,2,&s=0.75|0.5|0.25,1.5|2|3|4|6,s-l&g=s,l,xl,12 */
+/* @link https://utopia.fyi/type/calculator?c=320,16,1.2,1440,21,1.25,7,2,&s=0.75|0.5|0.25,1.5|2|3|4|6,s-l&g=s,l,xl,12 */
 
 :root {
-  --step--2: clamp(0.6944rem, 0.6459rem + 0.2156vw, 0.84rem);
-  --step--1: clamp(0.8333rem, 0.7611rem + 0.321vw, 1.05rem);
-  --step-0: clamp(1rem, 0.8958rem + 0.463vw, 1.3125rem);
-  --step-1: clamp(1.2rem, 1.0531rem + 0.6528vw, 1.6406rem);
-  --step-2: clamp(1.44rem, 1.2364rem + 0.9049vw, 2.0508rem);
-  --step-3: clamp(1.728rem, 1.4495rem + 1.2377vw, 2.5635rem);
-  --step-4: clamp(2.0736rem, 1.6967rem + 1.6752vw, 3.2043rem);
-  --step-5: clamp(2.4883rem, 1.9826rem + 2.2476vw, 4.0054rem);
+  /* Typographic scale */
+  --step--2: clamp(0.6944rem, 0.6529rem + 0.2079vw, 0.84rem);
+  --step--1: clamp(0.8333rem, 0.7714rem + 0.3095vw, 1.05rem);
+  --step-0: clamp(1rem, 0.9107rem + 0.4464vw, 1.3125rem);
+  --step-1: clamp(1.2rem, 1.0741rem + 0.6295vw, 1.6406rem);
+  --step-2: clamp(1.44rem, 1.2655rem + 0.8725vw, 2.0508rem);
+  --step-3: clamp(1.728rem, 1.4893rem + 1.1935vw, 2.5635rem);
+  --step-4: clamp(2.0736rem, 1.7505rem + 1.6154vw, 3.2043rem);
+  --step-5: clamp(2.4883rem, 2.0549rem + 2.1673vw, 4.0054rem);
+  --step-6: clamp(2.986rem, 2.4086rem + 2.8869vw, 5.0068rem);
+  --step-7: clamp(3.5832rem, 2.8188rem + 3.8219vw, 6.2585rem);
 
-  --space-3xs: clamp(0.25rem, 0.2292rem + 0.0926vw, 0.3125rem);
-  --space-2xs: clamp(0.5rem, 0.4375rem + 0.2778vw, 0.6875rem);
-  --space-xs: clamp(0.75rem, 0.6667rem + 0.3704vw, 1rem);
-  --space-s: clamp(1rem, 0.8958rem + 0.463vw, 1.3125rem);
-  --space-m: clamp(1.5rem, 1.3333rem + 0.7407vw, 2rem);
-  --space-l: clamp(2rem, 1.7917rem + 0.9259vw, 2.625rem);
-  --space-xl: clamp(3rem, 2.6875rem + 1.3889vw, 3.9375rem);
-  --space-2xl: clamp(4rem, 3.5833rem + 1.8519vw, 5.25rem);
-  --space-3xl: clamp(6rem, 5.375rem + 2.7778vw, 7.875rem);
+  /* Spacing scale */
+  --space-4xs: clamp(0.125rem, 0.1071rem + 0.0893vw, 0.1875rem);
+  --space-3xs: clamp(0.25rem, 0.2321rem + 0.0893vw, 0.3125rem);
+  --space-2xs: clamp(0.5rem, 0.4464rem + 0.2679vw, 0.6875rem);
+  --space-xs: clamp(0.75rem, 0.6786rem + 0.3571vw, 1rem);
+  --space-s: clamp(1rem, 0.9107rem + 0.4464vw, 1.3125rem);
+  --space-m: clamp(1.5rem, 1.3571rem + 0.7143vw, 2rem);
+  --space-l: clamp(2rem, 1.8214rem + 0.8929vw, 2.625rem);
+  --space-xl: clamp(3rem, 2.7321rem + 1.3393vw, 3.9375rem);
+  --space-2xl: clamp(4rem, 3.6429rem + 1.7857vw, 5.25rem);
+  --space-3xl: clamp(6rem, 5.4643rem + 2.6786vw, 7.875rem);
 
-  /* One-up pairs */
+  /* Spacing pairs */
   --space-3xs-2xs: clamp(0.25rem, 0.1042rem + 0.6481vw, 0.6875rem);
   --space-2xs-xs: clamp(0.5rem, 0.3333rem + 0.7407vw, 1rem);
   --space-xs-s: clamp(0.75rem, 0.5625rem + 0.8333vw, 1.3125rem);
@@ -30,9 +35,24 @@
   --space-xl-2xl: clamp(3rem, 2.25rem + 3.3333vw, 5.25rem);
   --space-2xl-3xl: clamp(4rem, 2.7083rem + 5.7407vw, 7.875rem);
 
-  /* Custom border radius pair */
-  --border-radius: clamp(0.1rem, 0.2vw, 0.25rem);
-  --small-padding: clamp(0.1rem, 0.2vw, 0.25rem);
+  /* Color palette */
+  --color-primary-bg: #1b244a;
+  --color-primary-border: #9aabd8;
+  --color-accent-score: #f94f6d;
+  --color-score-bg: #080001;
+  --color-text-white: #ffffff;
+  --color-success: #4caf50;
+  --color-danger: #f44336;
+  --color-warning: #ff9800;
+  --color-disabled-bg: #2a2a2a;
+  --color-disabled-border: #666;
+
+  /* Shadows */
+  --text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+  --shadow-primary: 0 4px 8px rgba(154, 171, 216, 0.4);
+  --shadow-success: 0 4px 8px rgba(76, 175, 80, 0.4);
+  --shadow-danger: 0 4px 8px rgba(244, 67, 54, 0.4);
+  --shadow-warning: 0 4px 8px rgba(255, 152, 0, 0.4);
 }
 * {
   margin: 0;
@@ -40,7 +60,7 @@
   box-sizing: border-box; /*Includes padding and border in element's total width and height*/
 }
 html {
-  min-height: 100vh; /*sets website view port height to take up full viewport*/
+  min-height: 100dvh; /*sets website view port height to take up full viewport*/
   display: flex; /*Sets up a flex container so that child can take up the full width*/
   flex-direction: column;
 }
@@ -48,162 +68,158 @@ body {
   flex: 1; /* Takes up entire vertical space of parent (html) */
   display: flex;
   flex-direction: column;
-  background-color: #1b244a;
+  background-color: var(--color-primary-bg);
   justify-content: center;
   align-items: center;
-  gap: var(--space-l); /* gap between time and game wrapper */
+  gap: var(--space-s); /* gap between time and game wrapper */
+  padding: var(--space-s) 0;
 }
 
 .time-wrapper {
   display: flex;
   flex-direction: column;
-  gap: clamp(0.5rem, 1.5vw, 2rem);
+  gap: var(--space-3xs);
+  align-items: center;
+  flex-shrink: 0;
+}
+
+.team-title,
+.time-text {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  color: var(--color-text-white);
+  font-weight: 700;
+  text-shadow: var(--text-shadow);
+  font-size: var(--step-4);
+  text-align: center;
+}
+
+.time-display {
+  font-family: "Cursed Timer ULiL", sans-serif;
+  color: var(--color-accent-score);
+  font-size: var(--step-7);
+  text-align: center;
+  text-shadow: var(--text-shadow);
+  line-height: 1.4;
+}
+
+.score-value {
+  font-family: "Cursed Timer ULiL", sans-serif;
+  color: var(--color-accent-score);
+  background-color: var(--color-score-bg);
+  border-radius: var(--space-3xs-2xs);
+  flex: 120;
+  font-size: var(--step-7);
+  padding: var(--space-s-m);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  line-height: 1.4;
 }
 
 .time-actions {
   display: flex;
   justify-content: space-between;
-  gap: clamp(0.25rem, 5vw, 2rem); /* Reduce gap for tighter spacing */
-}
-
-.time-btn {
-  flex: 1;
-  font-size: clamp(1rem, 2vw, 2rem);
-  border: var(--border-radius) solid #9aabd8;
-  padding: var(--small-padding);
-  border-radius: 8px;
-  color: #9aabd8;
-  background-color: #1b244a;
+  gap: var(--space-xs-s);
 }
 
 .increment-btn,
 .time-btn {
   transition: all 0.2s ease;
   cursor: pointer;
+  flex: 1;
+  border: 2px solid var(--color-primary-border);
+  font-size: var(--step--1);
+  padding: var(--space-2xs);
+  border-radius: var(--space-xs);
+  color: var(--color-primary-border);
+  background-color: var(--color-primary-bg);
+  /* WCAG standard - Ensures minimal size on small devices */
+  min-height: 2.75rem;
+  touch-action: manipulation;
+}
+
+.increment-btn:focus-visible,
+.time-btn:focus-visible {
+  outline: 3px solid var(--color-primary-border);
+  outline-offset: 2px;
 }
 
 .game-wrapper {
-  /* These properties affect the element itself in relation to the alignment properties of it's parent */
-  width: clamp(
-    300px,
-    90%,
-    750px
-  ); /*Will create 5% margins on each side due to (justify content center of the parent)*/
-  height: clamp(
-    200px,
-    50vh,
-    600px
-  ); /*Min height of 400px, max height of 600px, otherwise take up 65% of viewport height*/
+  /* Container takes a width of 90%, max 45rem */
+  width: min(90%, 45rem);
+  height: auto;
+  min-height: 0;
 
-  /* These properties affect it's children alignment */
+  /* These properties affect its children alignment */
   display: flex;
-  gap: var(--space-m-l);
+  gap: var(--space-m);
   justify-content: space-around;
+  flex: 1;
 }
 
 .score-wrapper {
   flex: 1;
   max-width: 300px;
+  min-height: 0;
   display: flex;
   flex-direction: column;
-  gap: clamp(1.5rem, 3vw, 2rem);
+  gap: var(--space-s);
 }
 
-.team-title,
-.time-text {
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
-  color: white;
-  font-weight: 700;
+.team-title {
   flex: 36;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
-  font-size: var(--step-4);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.time-display {
-  font-family: "Cursed Timer ULiL", sans-serif;
-  color: #f94f6d;
-  /* font-size: clamp(6rem, 10vw, 8rem); */
-  font-size: var(--space-2xl-3xl);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
-}
-.score-value {
-  font-family: "Cursed Timer ULiL", sans-serif;
-  color: #f94f6d;
-  background-color: #080001;
-  border-radius: 10px;
-  flex: 120;
-  font-size: var(--space-2xl-3xl);
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
 }
 
 .score-actions {
   flex: 45;
   display: flex;
   justify-content: space-between;
-  gap: clamp(0.25rem, 1vw, 0.5rem); /* Reduce gap for tighter spacing */
+  gap: var(--space-xs-s);
   align-items: stretch; /* Make buttons fill the height */
 }
 
 .increment-btn {
-  flex: 1;
   font-family: "Cursed Timer ULiL", sans-serif;
-  font-size: var(--step--1);
-  border: 4px solid #9aabd8;
-  border-radius: 8px;
-  color: #9aabd8;
-  background-color: #1b244a;
-  touch-action: manipulation;
 }
 
 /* Hover effects */
-.increment-btn:hover,
-.time-btn:hover {
-  background-color: #9aabd8;
-  color: #1b244a;
+.increment-btn:hover:not(:disabled),
+.time-btn:hover:not(:disabled) {
+  background-color: var(--color-primary-border);
+  color: var(--color-primary-bg);
   transform: translateY(-2px);
-  box-shadow: 0 4px 8px rgba(154, 171, 216, 0.4);
+  box-shadow: var(--shadow-primary);
 }
 /* Active effects */
-.increment-btn:active,
-.time-btn:active {
+.increment-btn:active:not(:disabled),
+.time-btn:active:not(:disabled) {
   transform: translateY(0) scale(0.95);
 }
-
 .time-btn:disabled,
 .increment-btn:disabled {
   opacity: 0.4;
   cursor: not-allowed;
-  /* important keyword is required to avoid disabled button from being highlighted when hover effect kicks in */
-  background-color: #2a2a2a !important;
-  border-color: #666 !important;
-  transform: translateY(0) !important;
-  box-shadow: none !important;
+  background-color: var(--color-disabled-bg);
+  border-color: var(--color-disabled-border);
+  transform: translateY(0);
+  box-shadow: none;
 }
 
 /* Special colors for timer buttons */
-#start-btn:hover {
-  background-color: #4caf50;
-  border-color: #4caf50;
-  box-shadow: 0 4px 8px rgba(76, 175, 80, 0.4);
+#start-btn:hover:not(:disabled) {
+  background-color: var(--color-success);
+  border-color: var(--color-success);
+  box-shadow: var(--shadow-success);
 }
 
-#stop-btn:hover {
-  background-color: #f44336;
-  border-color: #f44336;
-  box-shadow: 0 4px 8px rgba(244, 67, 54, 0.4);
+#stop-btn:hover:not(:disabled) {
+  background-color: var(--color-danger);
+  border-color: var(--color-danger);
+  box-shadow: var(--shadow-danger);
 }
 
-#reset-btn:hover {
-  background-color: #ff9800;
-  border-color: #ff9800;
-  box-shadow: 0 4px 8px rgba(255, 152, 0, 0.4);
+#reset-btn:hover:not(:disabled) {
+  background-color: var(--color-warning);
+  border-color: var(--color-warning);
+  box-shadow: var(--shadow-warning);
 }

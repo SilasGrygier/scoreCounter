@@ -88,9 +88,8 @@ function updateButtonStates() {
 
     startBtn.disabled = isRunning;
     stopBtn.disabled = !isRunning;
-    //reset disabled when game has not started -> isRunning is false and seconds set to 0
+    //reset disabled when game has not started -> isRunning is false and seconds is 0
     resetBtn.disabled = !isRunning && (seconds === 0);
-    console.log(`isrunning is ${isRunning} and seconds is ${seconds}`)
     scoreButtons.forEach(btn => btn.disabled = !isRunning)
 
 }
